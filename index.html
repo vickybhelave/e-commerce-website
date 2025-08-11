@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Mitra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Shop Mitra</h1>
+    </div>
+  </header>
+
+  <!-- Order Confirmation Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <h3>Order Confirmed!</h3>
+      <p>Thank you for your purchase!</p>
+      <button id="closePopup">OK</button>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Collection of Premium Products Designed for Modern Life</h2>
+    <div class="category-container">
+      <div class="category" data-category="home">
+        <span>Home</span>
+        <div class="dropdown-content">
+          <a href="#">Home Page</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <div class="category" data-category="shop">
+        <span>Shop</span>
+        <div class="dropdown-content">
+          <a href="#">New Arrivals</a>
+          <a href="#">Best Sellers</a>
+          <a href="#">Clearance</a>
+        </div>
+      </div>
+      <div class="category" data-category="collections">
+        <span>Collections</span>
+        <div class="dropdown-content">
+          <a href="#">Summer Collection</a>
+          <a href="#">Winter Collection</a>
+          <a href="#">Limited Edition</a>
+        </div>
+      </div>
+      <div class="category" data-category="about">
+        <span>About</span>
+        <div class="dropdown-content">
+          <a href="#">Our Story</a>
+          <a href="#">Team</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu">
+    <h2>Welcome <span id="welcome">to Shop Mitra</span></h2>
+    <div class="menu-grid">
+      <div class="dish-card" data-product-id="1">
+        <img src="Smart Watch.jpg" alt="">
+        <div class="product-info">
+          <h3>Smart Watch</h3>
+          <p class="price">₹550</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="2">
+        <img src="Bluetooth Headphones 5.jpg" alt="">
+        <div class="product-info">
+          <h3>Bluetooth Headphones</h3>
+          <p class="price">₹450</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="3">
+        <img src="Kind Unissex Bags.jpg" alt="Product 3">
+        <div class="product-info">
+          <h3>Bag</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="4">
+        <img src="Women Casual Shoes 3.jpg" alt="Product 4">
+        <div class="product-info">
+          <h3>Women Casual Shoes</h3>
+          <p class="price">₹600</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="5">
+        <img src="Apple 13 Mini Cause & Coures.jpg" alt="Product 5">
+        <div class="product-info">
+          <h3>Apple 13 Mini Cover</h3>
+          <p class="price">₹200</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="6">
+        <img src="Appliance Cover .jpg" alt="Product 6">
+        <div class="product-info">
+          <h3>Appliance Cover</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="7">
+        <img src="Bejeweled ring.jpg" alt="Product 7">
+        <div class="product-info">
+          <h3>Ring</h3>
+          <p class="price">₹250</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="8">
+        <img src="Belts.jpg" alt="Product 8">
+        <div class="product-info">
+          <h3>Belts</h3>
+          <p class="price">₹150</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="9">
+        <img src="BERSACHE Cross For Men .jpg" alt="Product 9">
+        <div class="product-info">
+          <h3>BERSACHE Cross For Men</h3>
+          <p class="price">₹200</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="10">
+        <img src="Big Study Table .jpg" alt="Product 10">
+        <div class="product-info">
+          <h3>Big Study Table</h3>
+          <p class="price">₹750</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="11">
+        <img src="Birde Cross For Men .jpg" alt="Product 11">
+        <div class="product-info">
+          <h3>Birde Cross For Men</h3>
+          <p class="price">₹200</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="12">
+        <img src="Birthday Partty Itmash.jpg" alt="Product 12">
+        <div class="product-info">
+          <h3>Birthday Party Items</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="13">
+        <img src="Blankets.jpg" alt="Product 13">
+        <div class="product-info">
+          <h3>Blankets</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="14">
+        <img src="Amazing Tawas.jpg" alt="Product 14">
+        <div class="product-info">
+          <h3>Amazing Tawas</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="15">
+        <img src="Bluetooth Headphones.jpg" alt="Product 15">
+        <div class="product-info">
+          <h3>Bluetooth Headphones</h3>
+          <p class="price">₹900</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="16">
+        <img src="Bluuetooth Speakers .jpg" alt="Product 16">
+        <div class="product-info">
+          <h3>Bluetooth Speakers</h3>
+          <p class="price">₹500</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="17">
+        <img src="Bracelet.jpg" alt="Product 17">
+        <div class="product-info">
+          <h3>Bracelet</h3>
+          <p class="price">₹100</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="18">
+        <img src="BRRIT ACCENT.jpg" alt="Product 18">
+        <div class="product-info">
+          <h3>BRIT ACCENT</h3>
+          <p class="price">₹200</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="19">
+        <img src="Caps.jpg" alt="Product 19">
+        <div class="product-info">
+          <h3>Caps</h3>
+          <p class="price">₹150</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="20">
+        <img src="Chain.jpg" alt="Product 20">
+        <div class="product-info">
+          <h3>Chain</h3>
+          <p class="price">₹100</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="21">
+        <img src="Charming rings.jpg" alt="Product 21">
+        <div class="product-info">
+          <h3>Charming Rings</h3>
+          <p class="price">₹110</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="22">
+        <img src="Chippers.jpg" alt="Product 22">
+        <div class="product-info">
+          <h3>Chippers</h3>
+          <p class="price">₹350</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="23">
+        <img src="Cotten Tshirts.jpg" alt="Product 23">
+        <div class="product-info">
+          <h3>Cotton Tshirts</h3>
+          <p class="price">₹430</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="24">
+        <img src="Cozy  Wear Aadad Fashionable men .jpg" alt="Product 24">
+        <div class="product-info">
+          <h3>Cozy Wear Adda Fashionable Men</h3>
+          <p class="price">₹310</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="25">
+        <img src="Dates.jpg" alt="Product 25">
+        <div class="product-info">
+          <h3>Dates</h3>
+          <p class="price">₹200</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="26">
+        <img src="Denver .jpg" alt="Product 26">
+        <div class="product-info">
+          <h3>Denver</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="27">
+        <img src="Digital Watch.jpg" alt="Product 27">
+        <div class="product-info">
+          <h3>Digital Watch</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="28">
+        <img src="Earphones..jpg" alt="Product 28">
+        <div class="product-info">
+          <h3>Earphones</h3>
+          <p class="price">₹600</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="29">
+        <img src="Electric Steamers.jpg" alt="Product 29">
+        <div class="product-info">
+          <h3>Electric Steamers</h3>
+          <p class="price">₹500</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="30">
+        <img src="Elite Bracelets.jpg" alt="Product 30">
+        <div class="product-info">
+          <h3>Elite Bracelets</h3>
+          <p class="price">₹160</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="31">
+        <img src="Emergency Lights.jpg" alt="Product 31">
+        <div class="product-info">
+          <h3>Emergency Lights</h3>
+          <p class="price">₹700</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="32">
+        <img src="Facewash.jpg" alt="Product 32">
+        <div class="product-info">
+          <h3>Facewash</h3>
+          <p class="price">₹190</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="33">
+        <img src="Fancy Men Shirts 4.jpg" alt="Product 33">
+        <div class="product-info">
+          <h3>Fancy Men Shirts</h3>
+          <p class="price">₹399</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="34">
+        <img src="Flash Lights.jpg" alt="Product 34">
+        <div class="product-info">
+          <h3>Flash Lights</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="35">
+        <img src="Flip fLOPES.jpg" alt="Product 35">
+        <div class="product-info">
+          <h3>Flip Flops</h3>
+          <p class="price">₹199</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="36">
+        <img src="Fogg sent.jpg" alt="Product 36">
+        <div class="product-info">
+          <h3>Fogg Scent</h3>
+          <p class="price">₹799</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="37">
+        <img src="Greshful Men Shirts.jpg" alt="Product 37">
+        <div class="product-info">
+          <h3>Freshful Men Shirts</h3>
+          <p class="price">₹399</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="38">
+        <img src="Hand Tools.jpg" alt="Product 38">
+        <div class="product-info">
+          <h3>Hand Tools</h3>
+          <p class="price">₹1000</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="39">
+        <img src="Handheld Games.jpg" alt="Product 39">
+        <div class="product-info">
+          <h3>Handheld Games</h3>
+          <p class="price">₹599</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="40">
+        <img src="Hoodies.jpg" alt="Product 40">
+        <div class="product-info">
+          <h3>Hoodie</h3>
+          <p class="price">₹449</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="41">
+        <img src="Idali makers.jpg" alt="Product 41">
+        <div class="product-info">
+          <h3>Idli Makers</h3>
+          <p class="price">₹699</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="42">
+        <img src="Indoor Striing Lights.jpg" alt="Product 42">
+        <div class="product-info">
+          <h3>Indoor String Lights</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="43">
+        <img src="Jewellery.jpg" alt="Product 43">
+        <div class="product-info">
+          <h3>Jewellery</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="44">
+        <img src="KASPY Mens Tshirts.jpg" alt="Product 44">
+        <div class="product-info">
+          <h3>KASPY Mens Tshirts</h3>
+          <p class="price">₹199</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="45">
+        <img src="ACHERON Wondwrful Remote Controle .jpg" alt="Product 45">
+        <div class="product-info">
+          <h3>ACHERON Wonderful Remote Control</h3>
+          <p class="price">₹399</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="46">
+        <img src="Latest Men Shirts.jpg" alt="Product 46">
+        <div class="product-info">
+          <h3>Latest Men Shirts</h3>
+          <p class="price">₹599</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="47">
+        <img src="Locketets.jpg" alt="Product 47">
+        <div class="product-info">
+          <h3>Lockets</h3>
+          <p class="price">₹599</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="48">
+        <img src="Locks.jpg" alt="Product 48">
+        <div class="product-info">
+          <h3>Locks</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="49">
+        <img src="Men Along Watch .jpg" alt="Product 49">
+        <div class="product-info">
+          <h3>Men Analog Watch</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="50">
+        <img src="Track Paints.jpg" alt="Product 50">
+        <div class="product-info">
+          <h3>Track Pants</h3>
+          <p class="price">₹699</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="51">
+        <img src="Men Bracelets.jpg" alt="Product 51">
+        <div class="product-info">
+          <h3>Men Bracelets</h3>
+          <p class="price">₹99</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="52">
+        <img src="Men Casual Shoes.jpg" alt="Product 52">
+        <div class="product-info">
+          <h3>Men Casual Shoes</h3>
+          <p class="price">₹399</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="53">
+        <img src="Men Cotton Tshirts.jpg" alt="Product 53">
+        <div class="product-info">
+          <h3>Men Cotton Tshirts</h3>
+          <p class="price">₹699</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="54">
+        <img src="Men Cross Body Bags.jpg" alt="Product 54">
+        <div class="product-info">
+          <h3>Body Bag</h3>
+          <p class="price">₹999</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="55">
+        <img src="Men Scarves.jpg" alt="Product 55">
+        <div class="product-info">
+          <h3>Men Scarves</h3>
+          <p class="price">₹240</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="56">
+        <img src="Men Shirts.jpg" alt="Product 56">
+        <div class="product-info">
+          <h3>Men Shirts</h3>
+          <p class="price">₹800</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="57">
+        <img src="Men Socks.jpg" alt="Product 57">
+        <div class="product-info">
+          <h3>Men Socks</h3>
+          <p class="price">₹170</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="58">
+        <img src="Men square Sanglasses.jpg" alt="Product 58">
+        <div class="product-info">
+          <h3>Sunglasses</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="59">
+        <img src="Mini Fan.jpg" alt="Product 59">
+        <div class="product-info">
+          <h3>Mini Fan</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="60">
+        <img src="Mobile Covers.jpg" alt="Product 60">
+        <div class="product-info">
+          <h3>Mobile Covers</h3>
+          <p class="price">₹399</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="61">
+        <img src="Mobille Chargers.jpg" alt="Product 61">
+        <div class="product-info">
+          <h3>Mobile Chargers</h3>
+          <p class="price">₹850</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="62">
+        <img src="Mouse.jpg" alt="Product 62">
+        <div class="product-info">
+          <h3>Mouse</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="63">
+        <img src="New Table Lamps.jpg" alt="Product 63">
+        <div class="product-info">
+          <h3>Table Lamps</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="64">
+        <img src="OPPO Reno 10 Pro 5G.jpg" alt="Product 64">
+        <div class="product-info">
+          <h3>OPPO Reno 10 Pro 5G</h3>
+          <p class="price">₹27000</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="65">
+        <img src="Paragon for men .jpg" alt="Product 65">
+        <div class="product-info">
+          <h3>Paragon for Men</h3>
+          <p class="price">₹450</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="66">
+        <img src="Pasta Cookers.jpg" alt="Product 66">
+        <div class="product-info">
+          <h3>Pasta Cookers</h3>
+          <p class="price">₹700</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="67">
+        <img src="Pilow Covers uniqu.jpg" alt="Product 67">
+        <div class="product-info">
+          <h3>Pillow Covers Unique</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="68">
+        <img src="Stylish Men Loafers.jpg" alt="Product 68">
+        <div class="product-info">
+          <h3>Stylish Men Loafers</h3>
+          <p class="price">₹700</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="69">
+        <img src="Men analog Watch.jpg" alt="Product 69">
+        <div class="product-info">
+          <h3>Men Analog Watch</h3>
+          <p class="price">₹650</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="70">
+        <img src="Pumpkin seeds.jpg" alt="Product 70">
+        <div class="product-info">
+          <h3>Pumpkin Seeds</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="71">
+        <img src="Rubik Cubes.jpg" alt="Product 71">
+        <div class="product-info">
+          <h3>Rubik Cubes</h3>
+          <p class="price">₹150</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="72">
+        <img src="Slippers For Women.jpg" alt="Product 72">
+        <div class="product-info">
+          <h3>Slippers For Women</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="73">
+        <img src="Smart Watch.jpg" alt="Product 73">
+        <div class="product-info">
+          <h3>Smart Watch</h3>
+          <p class="price">₹600</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="74">
+        <img src="Socks ..jpg" alt="Product 74">
+        <div class="product-info">
+          <h3>Socks</h3>
+          <p class="price">₹250</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="75">
+        <img src="spoons.jpg" alt="Product 75">
+        <div class="product-info">
+          <h3>Spoons</h3>
+          <p class="price">₹40</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="76">
+        <img src="Steel bottle.jpg" alt="Product 76">
+        <div class="product-info">
+          <h3>Steel Bottle</h3>
+          <p class="price">₹430</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="77">
+        <img src="STOVE.jpg" alt="Product 77">
+        <div class="product-info">
+          <h3>Stove</h3>
+          <p class="price">₹600</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="78">
+        <img src="Strainers.jpg" alt="Product 78">
+        <div class="product-info">
+          <h3>Strainers</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="79">
+        <img src="Study Table .jpg" alt="Product 79">
+        <div class="product-info">
+          <h3>Study Table</h3>
+          <p class="price">₹799</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="80">
+        <img src="Study Table..jpg" alt="Product 80">
+        <div class="product-info">
+          <h3>Study Table</h3>
+          <p class="price">₹699</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="81">
+        <img src="Style Chain .jpg" alt="Product 81">
+        <div class="product-info">
+          <h3>Style Chain</h3>
+          <p class="price">₹210</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="82">
+        <img src="Styles sun glasses.jpg" alt="Product 82">
+        <div class="product-info">
+          <h3>Styles Sun Glasses</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="83">
+        <img src="Styliosh Diigitel Kitchenn Scales.jpg" alt="Product 83">
+        <div class="product-info">
+          <h3>Stylish Digital Kitchen Scales</h3>
+          <p class="price">₹400</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="84">
+        <img src="Stylish Boys Pants.jpg" alt="Product 84">
+        <div class="product-info">
+          <h3>Stylish Boys Pants</h3>
+          <p class="price">₹649</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="85">
+        <img src="Stylish Men Loafers.jpg" alt="Product 85">
+        <div class="product-info">
+          <h3>Stylish Men Loafers</h3>
+          <p class="price">₹449</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="86">
+        <img src="Sunglasses.jpg" alt="Product 86">
+        <div class="product-info">
+          <h3>Sunglasses</h3>
+          <p class="price">₹300</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="87">
+        <img src="Sweatrts.jpg" alt="Product 87">
+        <div class="product-info">
+          <h3>Sweatshirts</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="88">
+        <img src="Sweats hirts.jpg" alt="Product 88">
+        <div class="product-info">
+          <h3>Sweatshirts</h3>
+          <p class="price">₹450</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="89">
+        <img src="Track Paints.jpg" alt="Product 89">
+        <div class="product-info">
+          <h3>Track Pants</h3>
+          <p class="price">₹450</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="90">
+        <img src="Trenday Men Scarves.jpg" alt="Product 90">
+        <div class="product-info">
+          <h3>Trendy Men Scarves</h3>
+          <p class="price">₹150</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="91">
+        <img src="Trendy Wireless Microphones.jpg" alt="Product 91">
+        <div class="product-info">
+          <h3>Trendy Wireless Microphones</h3>
+          <p class="price">₹699</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="92">
+        <img src="Trolley bags.jpg" alt="Product 92">
+        <div class="product-info">
+          <h3>Trolley Bags</h3>
+          <p class="price">₹2500</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="93">
+        <img src="Unisex Perfumes.jpg" alt="Product 93">
+        <div class="product-info">
+          <h3>Unisex Perfumes</h3>
+          <p class="price">₹349</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="94">
+        <img src="Vivo V50e 8Gb 256 Gb.jpg" alt="Product 94">
+        <div class="product-info">
+          <h3>Vivo V50e 8GB 256GB</h3>
+          <p class="price">₹31000</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="95">
+        <img src="Wild Tone Powder.jpg" alt="Product 95">
+        <div class="product-info">
+          <h3>Wild Tone Powder</h3>
+          <p class="price">₹350</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+      <div class="dish-card" data-product-id="96">
+        <img src="Women Casual Shoes 3.jpg" alt="Product 96">
+        <div class="product-info">
+          <h3>Women Casual Shoes</h3>
+          <p class="price">₹499</p>
+          <button onclick="showProductModal(this)">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div id="productModal" style="margin-bottom: 5%; justify-content: center;" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="product-details" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <img id="modalImage" src="" alt="Product Image" style="max-width:300px; margin: 5%; border-radius:8px;">
+        <h2 id="modalTitle"></h2>
+        <p class="price" id="modalPrice"></p>
+        <p id="modalDescription"></p>
+        <div class="quantity-selector">
+          <button onclick="changeQuantity(-1)">-</button>
+          <span id="quantity">1</span>
+          <button onclick="changeQuantity(1)">+</button>
+        </div>
+        <p id="totalPrice" class="total-price">Total: ₹0.00</p>
+        <button onclick="addToCart()" class="add-to-cart" style="margin-bottom: 10%;">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Online Shop</h3>
+        <p>🛒</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <section id="contact">
+          <h4 id="contact">📞 Contact Me</h4>
+          <div class="contact-container">
+            <p><strong>📩 Email:</strong> <a href="mailto:bhelavevicky66@gmail.com">vickybhelave@gmail.com</a></p>
+            <p><strong> 🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/vicky-bhelave-788718372" target="_blank">vicky-bhelave</a></p>
+            <p><strong>   Instagram:</strong> <a href="https://www.instagram.com/__vic_ky__302" target="_blank">@__vic_ky__302</a></p>
+          </div>
+        </section>
+      </div>
+      <div>
+        <h4>Stay Updated</h4>
+        <input type="email" placeholder="Your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <p class="footer-note">© 2025 Online Shop | Made with by Vicky Bhelave</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
